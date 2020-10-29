@@ -45,14 +45,7 @@ Vue.component('todo', {
                 .delete('http://157.230.17.132:3021/todos' + '/' + id)
                 .then(response => this.getTodo())
                 .catch(error => console.log(error))
-        },
-        objectSize(infos, numberObj) {
-            for (key in infos) {
-                numberObj +1;
-            }
-            console.log(numberObj)
         }
-
     },
     mounted() {
         this.getTodo()
